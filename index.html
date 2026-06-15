@@ -78,10 +78,11 @@
   .muted{color:#5c4a3a;}
 
   /* ---------- cover ---------- */
-  .cover{justify-content:center;text-align:left;}
+  .cover{justify-content:center;align-items:center;text-align:left;}
   .cover .frame{
-    border:5px double var(--ink);padding:clamp(20px,6vw,46px);
-    background:var(--paper2);position:relative;max-width:840px;
+    border:5px double var(--ink);padding:clamp(20px,5vw,52px);
+    background:var(--paper2);position:relative;
+    width:100%;max-width:880px;margin:0 auto;
     box-shadow:6px 6px 0 var(--shadow);
   }
   .cover .corner{position:absolute;width:18px;height:18px;border:3px solid var(--ink);}
@@ -360,7 +361,7 @@ function myth(statement, correct, explain){
 const slides = [
 /* 0 cover */
 {toc:"封面", html:`
-<div class="cover" style="flex:1">
+<div class="cover" style="flex:1;min-height:0">
   <div class="frame">
     <span class="corner tl"></span><span class="corner tr"></span>
     <span class="corner bl"></span><span class="corner br"></span>
@@ -370,7 +371,7 @@ const slides = [
     <p class="lede muted">把「替長輩做」變成「陪長輩做」──<br>從約束到自主，重建尊嚴與生活功能。</p>
     <div class="org">
       社團法人臺灣護理之家協會　・　04-8874715<br>
-      上線測試 08:20　｜　上課時間 09:00–11:00
+      上課時間 09:00–11:00
     </div>
   </div>
 </div>`},
@@ -652,6 +653,63 @@ const slides = [
 </div>
 <div class="callout warn"><h5>團隊共識</h5><p>零約束要全單位＋家屬一起承擔風險、共同決策。記錄替代措施與評估，這既是安全保障，也是專業展現。</p></div>`},
 
+/* ===== exercise: functional movement ===== */
+
+/* functional movement intro */
+{toc:"運動｜功能性運動", html:`
+<span class="num-chip">PART 3 — 實務篇</span>
+<h2 class="heading">關鍵不是運動，是「功能性運動」</h2>
+<p class="lede">自立支援的運動，不追求把長輩練成運動員，而是練「<b>生活用得到的動作</b>」。竹內孝仁特別強調<b>步行</b>──走路會啟動站立大腸反射促進排便、改善意識清醒度，連帶幫助排泄與吞嚥訓練。</p>
+<div class="cards two">
+  <div class="note-card"><span class="pin"></span><h4><span class="ico">問</span>什麼是功能性運動？</h4><p>把訓練<b>綁進真實生活動作</b>：練的不是「抬腿 10 下」，而是「能自己站起來、走到廁所、從椅子坐下站起」。動作本身就是生活技能，練了馬上用得到。</p></div>
+  <div class="note-card"><span class="pin"></span><h4><span class="ico">比</span>和一般運動差在哪</h4><p>一般運動練單一肌群；功能性運動練<b>多關節、多肌群的協調</b>，貼近起身、轉位、行走、彎腰拿物等日常。對長輩來說，這才是「維持自理」的關鍵。</p></div>
+</div>
+<div class="callout"><h5>三個層次，循序漸進</h5><p>依長輩能力，從<b>床上 → 輪椅（坐姿）→ 站姿與步行</b>逐步進階。臥床的先練坐起，能坐穩的練站，能站的練走。下面兩頁是各層次可直接帶長輩做的動作。</p></div>
+<p class="footnote">註：所有運動皆須先由護理師／物理治療師評估安全與禁忌（心肺、骨折、傷口等），照服員依評估帶領並觀察反應。</p>`},
+
+/* bed + wheelchair exercises */
+{toc:"運動｜床上・輪椅", html:`
+<span class="num-chip">PART 3 — 實務篇</span>
+<h2 class="heading">床上 & 輪椅（坐姿）運動</h2>
+<div class="role-wrap">
+  <div class="role-card care"><div class="role-hd">🛏 床上運動（臥床／剛起步）</div><div class="role-bd"><ul>
+    <li><b>踝泵運動：</b>腳板上下勾、繞圈，促進血循、防血栓。</li>
+    <li><b>抬臀橋式：</b>屈膝、臀部抬離床面，練核心與下肢，是坐起的基礎。</li>
+    <li><b>翻身練習：</b>引導側躺、手撐床面，為自己坐起鋪路。</li>
+    <li><b>坐起訓練：</b>先搖高床頭降低難度，側躺用手肘撐起 → 逐步自己坐穩。</li>
+    <li><b>關節活動：</b>四肢各關節緩慢全範圍活動，防攣縮。</li>
+  </ul></div></div>
+  <div class="role-card nurse"><div class="role-hd">♿ 輪椅／坐姿運動</div><div class="role-bd"><ul>
+    <li><b>坐姿抬腿：</b>輪流屈膝抬腳，練大腿肌耐力。</li>
+    <li><b>原地踏步（坐）：</b>坐穩雙腳輪流踏，模擬走路。</li>
+    <li><b>舉水瓶：</b>手握小水瓶舉到肩高，練上肢。</li>
+    <li><b>扭毛巾：</b>緩慢用力扭毛巾，練握力與前臂。</li>
+    <li><b>雙手畫圈：</b>握拳同時畫圈，模擬推輪椅、增進自行移動能力。</li>
+  </ul></div></div>
+</div>
+<div class="callout warn"><h5>安全提醒</h5><p>坐姿運動務必先<b>固定輪椅煞車、雙腳踏地或踏板</b>。臥床長輩起身放慢、注意姿勢性低血壓。每個動作量力而為，會喘或不適即停並回報。</p></div>`},
+
+/* standing + walking exercises */
+{toc:"運動｜站姿・步行", html:`
+<span class="num-chip">PART 3 — 實務篇</span>
+<h2 class="heading">站姿 & 步行運動</h2>
+<p class="lede">能站、能走，是自立支援的<b>最高目標</b>──它直接關係到能不能自己上廁所、離床、過生活。</p>
+<div class="role-wrap">
+  <div class="role-card care"><div class="role-hd">🧍 站姿運動（扶穩進行）</div><div class="role-bd"><ul>
+    <li><b>起立坐下：</b>坐穩固有扶手椅，踩地站起維持 1 秒再坐下──最重要的功能性動作。</li>
+    <li><b>扶站練習：</b>扶穩桌／扶手站立，逐步延長站立時間。</li>
+    <li><b>提踵：</b>扶穩後腳跟提起、放下，練小腿與平衡。</li>
+    <li><b>單腳微抬平衡：</b>扶穩單腳輕抬離地數秒，練平衡防跌。</li>
+  </ul></div></div>
+  <div class="role-card nurse"><div class="role-hd">🚶 步行運動（核心目標）</div><div class="role-bd"><ul>
+    <li><b>扶著走：</b>用助行器或扶手，從幾步開始慢慢增加。</li>
+    <li><b>生活動線當路線：</b>走到餐桌、廁所，把步行融入日常。</li>
+    <li><b>對話速度：</b>能邊走邊講話、略費力為適當強度。</li>
+    <li><b>記距離：</b>記錄步數或距離，讓進步看得見。</li>
+  </ul></div></div>
+</div>
+<div class="callout"><h5>為什麼步行最關鍵</h5><p>步行能改善排便（站立大腸反射）、提升意識清醒度，進而幫助排泄訓練與吞嚥訓練。<b>能走，幾乎整個自立支援循環都被帶動起來。</b></p></div>`},
+
 /* ===== PART 4: role-split operations for 三不四要 ===== */
 
 /* OP intro */
@@ -922,6 +980,32 @@ myth("「超過 3 天未解、腹脹、血便等，要回報護理師。」",'tr
   <div class="note-card"><span class="pin"></span><h4><span class="ico">後</span>怎麼翻轉</h4><p>把復健搬進日常：自己倒水、自己走到餐桌、自己上廁所。給時間、給扶手、給目標，<b>從「被照顧」變回「過生活」</b>。</p></div>
 </div>
 <div class="callout"><h5>帶走的洞察</h5><p>真正的復能，不在復健室，在<b>每天的生活動作</b>裡。照服員每一次「忍住不代勞」，就是一次最有效的治療。</p></div>`},
+
+/* ===== dementia & cognition ===== */
+
+/* dementia: concept */
+{toc:"失智｜自立支援觀念", html:`
+<span class="op-eyebrow">特別篇・認知與失智</span>
+<h2 class="heading">失智長輩，更需要自立支援</h2>
+<p class="lede">失智不等於什麼都不能做。長輩失去的是部分認知功能，<b>但情緒、習慣、身體記憶常還在</b>。自立支援對失智者的目標：<b>維持殘存能力、延緩退化、減少行為精神症狀（BPSD）</b>。</p>
+<div class="cards two">
+  <div class="note-card"><span class="pin"></span><h4><span class="ico">能</span>看見「還能做的」</h4><p>洗碗、摺衣、澆花這類<b>身體記得的習慣動作</b>，失智長輩往往還做得來。給他熟悉、簡單、有步驟的事做，維持功能也維持價值感。</p></div>
+  <div class="note-card"><span class="pin"></span><h4><span class="ico">藥</span>非藥物優先</h4><p>研究證實懷舊、認知刺激、現實導向、運動、音樂、藝術等<b>非藥物治療</b>，能改善認知退化、減少 BPSD。抗精神病藥有黑框警告風險，須由醫師審慎評估、最低劑量最短時間。</p></div>
+</div>
+<div class="callout warn"><h5>BPSD 不是「故意找麻煩」</h5><p>躁動、遊走、攻擊等行為，常是長輩在<b>表達沒被滿足的需求</b>──疼痛、便祕、尿路感染、脫水、太吵太熱、孤獨被責備。先找原因，別先壓制。</p></div>`},
+
+/* dementia: how-to */
+{toc:"失智｜怎麼做", html:`
+<span class="op-eyebrow">特別篇・認知與失智</span>
+<h2 class="heading">面對失智長輩，這樣做</h2>
+<div class="steps">
+  <div class="step"><div class="body"><h4>先排除身體不適</h4><p>躁動時先查：是否疼痛、便祕、尿路感染、脫水、藥物副作用、太餓太累。<b>身體需求滿足了，行為常常就緩解。</b></p></div></div>
+  <div class="step"><div class="body"><h4>不爭辯、先同理</h4><p>他說「有人偷我東西」，別反駁。先傾聽、認同情緒，再溫和轉移注意力（拿熟悉的物品、回到熟悉空間）。糾正事實只會升高對立。</p></div></div>
+  <div class="step"><div class="body"><h4>建立規律、可預期的生活</h4><p>固定作息、固定流程，降低不安。把日常活動排進每天，讓長輩知道接下來會發生什麼。</p></div></div>
+  <div class="step"><div class="body"><h4>簡化、給步驟、給線索</h4><p>一次給一個指令、把動作拆小步驟、用圖示或實物提示。讓他「跟得上」，就能自己完成更多。</p></div></div>
+  <div class="step"><div class="body"><h4>善用非藥物活動</h4><p>音樂、老照片懷舊、簡單手作、散步。投其所好、有成就感的活動，能安定情緒、維持功能。</p></div></div>
+</div>
+<div class="callout"><h5>溝通小提醒</h5><p>面對面、放慢、簡短、語氣溫和；多用肯定句少用否定句。<b>避免單一照顧者</b>，讓長輩習慣多人照顧，對長輩與團隊都更好。嚴重或有傷害風險時，連結失智共照中心或精神科醫師。</p></div>`},
 
 /* 15 daily checklist */
 {toc:"明天就能做", html:`
